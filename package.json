@@ -1,0 +1,20 @@
+{
+  "name": "whatsclose-crawl-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Fred-el-Jolo <guillaume.frederic@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "babel-node index.js"
+  },
+  "presets": ["env"],
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "standard": "^10.0.3"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.6.1",
+    "nats": "^0.7.24"
+  }
+}
