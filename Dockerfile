@@ -1,9 +1,12 @@
 FROM node:6.11.4
 
+# Create db directory
+WORKDIR /var/whatsclose-data/crawl-db
+
 # Create app directory
 WORKDIR /home/node/app
 
-VOLUME /home/node/app
+
 
 #RUN yarn
 

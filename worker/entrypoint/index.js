@@ -1,5 +1,6 @@
 import NATS from 'nats'
-const nats = NATS.connect()
+const nats = NATS.connect('nats://ruser:T0pS3cr3t@nats:4222')
+// const nats = NATS.connect()
 
 export function initialize () {
   console.log('Entered in init function')
