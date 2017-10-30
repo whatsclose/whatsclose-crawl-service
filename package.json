@@ -5,7 +5,7 @@
   "author": "Fred-el-Jolo <guillaume.frederic@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "babel-node index.js"
+    "start": "NODE_PATH=\"$(pwd)\" babel-node index.js"
   },
   "babel": {
     "presets": [
@@ -23,6 +23,7 @@
     "eslint-plugin-react": "^7.4.0"
   },
   "dependencies": {
+    "envalid": "^4.1.1",
     "nats": "^0.7.24"
   }
 }
