@@ -1,6 +1,6 @@
 import envalid from 'envalid';
 
-const natsConf = envalid.cleanEnv(process.env, {
+const config = envalid.cleanEnv(process.env, {
     NATS_HOST: envalid.host({ devDefault: `nats` }),
     NATS_PORT: envalid.port({ devDefault: 4222 }),
 
@@ -8,4 +8,4 @@ const natsConf = envalid.cleanEnv(process.env, {
     NATS_PASSWORD: envalid.str(),
 });
 
-export default natsConf;
+export default config;

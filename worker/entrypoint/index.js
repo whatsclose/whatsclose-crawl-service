@@ -1,5 +1,4 @@
-import config from 'config/index';
-import NATS from 'nats';
+import natsAdapter from 'models/nats/index';
 
 const natsURL = `nats://${config.NATS_USER}:${config.NATS_PASSWORD}@${config.NATS_HOST}:${config.NATS_PORT}`;
 const nats = NATS.connect(natsURL);

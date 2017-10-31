@@ -13,6 +13,7 @@
     },
     "rules": {
         "indent": ["error", 4],
-        "quotes": ["error", "backtick"]
+        "quotes": ["error", "backtick"],
+        "func-names": ["warn", "as-needed"]
     }
 }

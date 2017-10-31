@@ -1,0 +1,7 @@
+package crawl;
+syntax = "proto3";
+
+message CrawlMessage {
+    required string id = 1;
+    required string message = 2;
+}

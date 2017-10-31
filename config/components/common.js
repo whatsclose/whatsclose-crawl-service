@@ -1,7 +1,7 @@
 import envalid from 'envalid';
 
 const config = envalid.cleanEnv(process.env, {
-    SERVICE_NAME: envalid.str(),
+    NODE_ENV: envalid.str({ choices: [`development`, `production`, `test`, `provision`] }),
 });
 
 export default config;
