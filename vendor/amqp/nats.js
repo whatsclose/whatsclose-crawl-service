@@ -18,7 +18,14 @@ const natsAdapter = function () {
             return this.nats.close();
         },
         publish(channel, message) {
-            return this.nats.publish(channel, message);
+            return new Promise((resolve, reject) => {
+                try {
+                    resolve(this.nats.publish(channel, message));
+                } catch (err) {
+                    reject(err);
+                }
+            });
+            // return this.nats.publish(channel, message);
         },
         subscribe(channel, callback) {
             return this.nats.subscribe(channel, callback);
