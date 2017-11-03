@@ -6,6 +6,7 @@ const config = envalid.cleanEnv(process.env, {
 
     NATS_USER: envalid.str(),
     NATS_PASSWORD: envalid.str(),
+    NATS_PROTOBUF_ENABLED: envalid.bool({ default: false }),
 });
 
 export default config;
