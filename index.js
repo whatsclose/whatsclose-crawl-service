@@ -6,15 +6,22 @@ amqp.connect();
 
 const message = {
     id: `1`,
-    message: `Hello World dscfrom PROTO-World`,
+    message: `Hello PROTO-World`,
 };
-
-amqp.publish(amqp.CHANNEL.foo, message);
 
 amqp.subscribe(amqp.CHANNEL.foo, (msg) => {
     logger.info(`Received a message: ${JSON.stringify(msg)}`);
 });
 
+
+// function myPublish() {
+//   amqp.publish(amqp.CHANNEL.foo, message);
+// }
+
+// setTimeout(myPublish, 5000);
+
+
+amqp.publish(amqp.CHANNEL.foo, message);
 
 /* process.on(`SIGINT`, () => {
     logger.debug(`SIGINT Gracefully closing queue`);
